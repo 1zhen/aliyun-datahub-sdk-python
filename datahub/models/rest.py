@@ -72,7 +72,7 @@ class CommonResponseResult(object):
                 content = json.loads(resp.content)
                 self._error_code = content['ErrorCode']
                 self._error_msg = content['ErrorMessage']
-            except Exception, e:
+            except Exception as e:
                 raise e
 
     @property
@@ -91,14 +91,14 @@ class CommonResponseResult(object):
     def error_msg(self):
         return self._error_msg
 
-    def parse(resp):
+    def parse(self, resp):
         try:
             self._status_code = resp.status_code
             self._request_id = resp.headers['x-datahub-request-id']
             content = json.loads(resp.content)
             self._error_code = content['ErrorCode']
             self._error_msg = content['ErrorMessage']
-        except Exception, e:
+        except Exception as e:
             raise e
 
 class RestModel(object):
