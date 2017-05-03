@@ -53,12 +53,12 @@ try:
         _getcwd = os.getcwdu
 except AttributeError:
     pass
-
-# Pre-2.3 workaround for booleans
-try:
-    True, False
-except NameError:
-    True, False = 1, 0
+#
+# # Pre-2.3 workaround for booleans
+# try:
+#     True, False
+# except NameError:
+#     True, False = 1, 0
 
 # Pre-2.3 workaround for basestring.
 try:
