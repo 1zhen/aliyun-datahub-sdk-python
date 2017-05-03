@@ -49,7 +49,7 @@ _base = str
 _getcwd = os.getcwd
 try:
     if os.path.supports_unicode_filenames:
-        _base = unicode
+        # _base = unicode
         _getcwd = os.getcwdu
 except AttributeError:
     pass
@@ -68,8 +68,8 @@ except AttributeError:
 
 # Universal newline support
 _textmode = 'r'
-if hasattr(file, 'newlines'):
-    _textmode = 'U'
+# if hasattr(file, 'newlines'):
+#     _textmode = 'U'
 
 ### Errors
 

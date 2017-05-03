@@ -19,7 +19,10 @@
 
 from __future__ import absolute_import
 
-import ConfigParser
+try:
+    import ConfigParser
+except ModuleNotFoundError as e:
+    import configparser as ConfigParser
 
 class Configer(object):
     def __init__(self, config_file):

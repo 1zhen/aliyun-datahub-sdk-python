@@ -81,7 +81,7 @@ def counter(func):
     return wrapper
 
 def hmac_sha1(secret, data):
-    return b64encode(hmac.new(secret, data, sha1).digest())
+    return b64encode(hmac.new(bytes(secret, 'utf-8'), bytes(data, 'utf-8'), sha1).digest()).decode()
 
 def md5_hexdigest(data):
     return md5(data).hexdigest()
