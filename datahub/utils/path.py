@@ -60,11 +60,11 @@ except AttributeError:
 # except NameError:
 #     True, False = 1, 0
 
-# Pre-2.3 workaround for basestring.
-try:
-    basestring
-except NameError:
-    basestring = (str, unicode)
+# # Pre-2.3 workaround for basestring.
+# try:
+#     basestring
+# except NameError:
+#     basestring = (str, unicode)
 
 # Universal newline support
 _textmode = 'r'
